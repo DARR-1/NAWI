@@ -42,7 +42,7 @@ def main(page: ft.Page):
         ft.Column(
             [my_router.body, my_router.appBar],
             alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
-            height=page.height,
+            height=page.height * 0.9,
         )
     )
 

@@ -18,16 +18,16 @@ def getContainer(page, goFunc: callable, route, topic: str, ft=ft):
                     bgcolor=page.theme.color_scheme.surface,
                     color=page.theme.color_scheme.on_primary_container,
                     stroke_cap=ft.StrokeCap.ROUND,
-                    width=page.width * 0.113 * 0.6,
-                    height=page.width * 0.113 * 0.6,
+                    width=page.width * 4 * 0.113 * 0.6,
+                    height=page.width * 4 * 0.113 * 0.6,
                     stroke_align=0,
                 ),
             ],
             alignment=ft.MainAxisAlignment.CENTER,
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
         ),
-        width=page.width * 0.2,
-        height=page.width * 0.13,
+        width=page.width * 4 * 0.2,
+        height=page.width * 4 * 0.13,
         bgcolor=page.theme.color_scheme.primary_container,
         border_radius=ft.border_radius.all(29),
         alignment=ft.alignment.center,
@@ -46,8 +46,8 @@ def nahuatlView(page, goFunc: callable, ft=ft):
                     [
                         ft.Container(
                             content=ft.ProgressBar(
-                                width=page.width * 0.18,
-                                height=page.width * 0.003,
+                                width=page.width * 4 * 0.18,
+                                height=page.width * 4 * 0.003,
                                 color=page.theme.color_scheme.primary,
                                 bgcolor=page.theme.color_scheme.secondary_container,
                                 value=0.1,
@@ -63,7 +63,7 @@ def nahuatlView(page, goFunc: callable, ft=ft):
                                 color=page.theme.color_scheme.on_background,
                             ),
                             alignment=ft.alignment.center,
-                            width=page.width * 0.05,
+                            width=page.width * 4 * 0.05,
                             margin=ft.margin.only(left=10, right=0, top=75, bottom=0),
                         ),
                     ]
@@ -76,7 +76,7 @@ def nahuatlView(page, goFunc: callable, ft=ft):
                         color=page.theme.color_scheme.on_background,
                     ),
                     alignment=ft.alignment.center,
-                    width=page.width,
+                    width=page.width * 4,
                 ),
                 ft.Container(
                     content=ft.Text(
@@ -95,8 +95,8 @@ def nahuatlView(page, goFunc: callable, ft=ft):
                     ],
                     alignment=ft.MainAxisAlignment.START,
                     spacing=10,
-                    height=page.width * 0.15,
-                    width=page.width * 2,
+                    height=page.width * 4 * 0.15,
+                    width=page.width * 4 * 2,
                 ),
                 ft.Container(
                     content=ft.Text(
@@ -115,8 +115,28 @@ def nahuatlView(page, goFunc: callable, ft=ft):
                     ],
                     alignment=ft.MainAxisAlignment.START,
                     spacing=10,
-                    height=page.width * 0.15,
-                    width=page.width * 2,
+                    height=page.width * 4 * 0.15,
+                    width=page.width * 4 * 2,
+                ),
+                ft.Container(
+                    content=ft.Text(
+                        "Escucha",
+                        font_family="Monserrat Alternates",
+                        size=20,
+                        color=page.theme.color_scheme.on_background,
+                    ),
+                    margin=ft.margin.only(left=10),
+                ),
+                ft.Row(
+                    [
+                        getContainer(
+                            page, goFunc, "/HablaView/Alphabet", "El Alfabeto", ft
+                        ),
+                    ],
+                    alignment=ft.MainAxisAlignment.START,
+                    spacing=10,
+                    height=page.width * 4 * 0.15,
+                    width=page.width * 4 * 2,
                 ),
             ]
         )
